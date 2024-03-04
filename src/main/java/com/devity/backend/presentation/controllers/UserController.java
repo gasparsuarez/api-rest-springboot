@@ -43,7 +43,7 @@ public class UserController {
             User user = userRepository.createUser(dto);
 
             return ResponseEntity.status(201).body(user);
-        };
+        }
 
         @PutMapping()
         ResponseEntity<User> updateUser(@Valid @RequestBody UpdateUserDto dto) throws CustomException {
